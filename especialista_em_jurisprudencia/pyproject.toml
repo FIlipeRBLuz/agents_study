@@ -1,0 +1,23 @@
+[project]
+name = "Cody_Crew_Juris"
+version = "0.1.0"
+description = "Cody_Crew_Juris using crewAI"
+authors = [{ name = "Filipe Luz]", email = "filipe.luz@castgroup.com.br" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.95.0,<1.0.0"
+]
+
+[project.scripts]
+Cody_Crew_Juris = "Cody_Crew_Juris.main:run"
+run_crew = "Cody_Crew_Juris.main:run"
+train = "Cody_Crew_Juris.main:train"
+replay = "Cody_Crew_Juris.main:replay"
+test = "Cody_Crew_Juris.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
